@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./imgs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./imgs/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./imgs/favicon-16x16.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Elysium Weather</title>
+  </head>
+  <body>
+    <!-- div principal -->
+    <div id="main" class="row">
+      <div id="leftInfo" class="col m4 l3 hide-on-small-only">
+        <div id="curiousInfo">
+          <h5>wherem am I?</h5>
+          <div class="divider"></div>
+          <p>You're at Elysium Planitia! You've just arrived a flat, smooth
+             plain near Mars' equator, probably one of the hottest places for
+             you to be right now. Isn't that cool?</br>Enjoy your time but
+             be careful with all the dust storms we have here! Did you know we have the largest ones
+             in the entire Solar System? </br>
+             If you are lucky, you may even see a big aurora brightining around here...
+          </p>
+        </div>
+        <button id="curiousButton" class="browser-default">
+          <p>feeling curious?</p>
+        </button>
+      </div>
+
+      <div id="mainInfo" class="col s12 m4 l6">
+        <div id="headerText">
+          <p id="welcome">welcome to Mars</p>
+          <p id="elysium">ELYSIUM PLANITIA</p>
+        </div>
+
+        <div id="currentSol" class="z-depth-5">
+          <div id="currentSeason">---</div>
+          <div id="currentPrincipal">
+            <p id="currentNumber">Sol ---</p>
+            <p id="currentTemperature">--- °F</p>
+          </div>
+          <div id="currentExtra">
+            <p id="currentWind">wind speed: --- km/h</p>
+            <p id="currentPressure">pressure: --- Pa</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="rightInfo" class="col m4 l3 hide-on-small-only">
+        <div id="lostInfo">
+          <h5>bring him home!</h5>
+          <div class="divider"></div>
+          <p>If you're confused, don't worry! Here we have all the essential data you need
+            to make a living in Mars. Here you will find info about the Mars weather, atmospheric condition
+            and even the current season. </br>
+            The next Mars mission may take a couple years (or just
+            a little bit more, you know) to happen, so you better start fertilizing the soil...
+          </p>
+        </div>
+        <button id="lostButton"><p>feeling lost?</p></button>
+      </div>
+    </div>
+
+    <!-- apenas visível em mobile -->
+    <div class="row">
+      <div class="col s12 hide-on-med-and-up">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">
+              <p>feeling curious?</p>
+            </div>
+            <div class="collapsible-body">
+              <h5>wherem am I?</h5>
+              <div class="divider"></div>
+              <p>
+                You're at Elysium Planitia! You've just arrived a flat, smooth
+                plain near Mars' equator, probably one of the hottest places for
+                you to be right now. Isn't that cool?</br>Enjoy your time but
+                be careful with all the dust storms we have here! Did you know we have the largest ones
+                in the entire Solar System? </br>
+                If you are lucky, you may even see a big aurora brightining around here...
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <p>feeling lost?</p>
+            </div>
+            <div class="collapsible-body">
+              <h5>bring him home!</h5>
+              <div class="divider"></div>
+              <p>
+                If you're confused, don't worry! Here we have all the essential data you need
+            to make a living in Mars. Here you will find info about the Mars weather, atmospheric condition
+            and even the current season. </br>
+            The next Mars mission may take a couple years (or just
+            a little bit more, you know) to happen, so you better start fertilizing the soil...
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- div de dados anteriores -->
+    <div id="previousHeader"><p>PREVIOUS SOL DATA</p></div>
+    <div id="previousSol">
+      no previous Sol data
+    </div>
+
+    <div id="footer">
+      <p>
+        all data from temperature, wind speed and pressure are average values as
+        given by
+        <a
+          href="https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf"
+          target="_blank"
+          >NASA InSight API</a
+        >.
+      </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
