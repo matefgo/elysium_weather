@@ -2,10 +2,10 @@ window.addEventListener('load', start);
 
 // função principal
 async function start() {
+  infoButtons();
   let solInfo = await getAPIData();
   renderCurrentSol(solInfo[0]);
   renderPreviousSol(solInfo.slice(1, 6));
-  infoButtons();
 }
 
 // acessa a API e retorna o JSON recebido manipulado
