@@ -4,6 +4,7 @@ window.addEventListener('load', start);
 async function start() {
   infoButtons();
   let solInfo = await getAPIData();
+  console.log(solInfo);
   renderCurrentSol(solInfo[0]);
   renderPreviousSol(solInfo.slice(1, 6));
 }
@@ -14,6 +15,7 @@ async function getAPIData() {
     'https://api.nasa.gov/insight_weather/?api_key=z5REoKtfaBJmjXS6QyM0f3VPzPSGjHzJeW3lMCZz&feedtype=json&ver=1.0'
   );
   const json = await res.json();
+  console.log(json);
   return marsDays(json);
 }
 
@@ -155,7 +157,7 @@ function infoButtons() {
   });
 }
 
-// script to Materialize que trabalha com as classes collapsible
+// script do Materialize que trabalha com as classes collapsible
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.collapsible');
   var instances = M.Collapsible.init(elems);
